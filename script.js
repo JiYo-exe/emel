@@ -6,7 +6,7 @@ const video = document.querySelector("#intro-video");
 const status = document.querySelector("#video-status");
 
 function redirectToForm() {
-  status.textContent = "Opening the form…";
+  status.textContent = "Entering the battlefield...";
   window.location.replace(FORM_URL);
 }
 
@@ -21,9 +21,9 @@ function startVideoGate() {
 
   // This is Tenor's MP4 version of the supplied GIF. Muting lets it start reliably on mobile.
   video.play().then(() => {
-    status.textContent = "Please watch the video to continue";
+    status.textContent = "Preparing for glorious battle for glory...";
   }).catch(() => {
-    status.textContent = "Tap the video to start, then the form will open when it finishes.";
+    status.textContent = "Tap the video to see something cool";
     video.controls = true;
   });
 }
