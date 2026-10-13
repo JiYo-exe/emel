@@ -11,11 +11,11 @@ function redirectToForm() {
 }
 
 function startVideoGate() {
-  document.title = "Please watch to continue";
+  document.title = "Preparing for glorious battle for glory...";
 
   video.addEventListener("ended", redirectToForm, { once: true });
   video.addEventListener("error", () => {
-    status.textContent = "Opening the form…";
+    status.textContent = "Entering the battlefield...";
     window.setTimeout(redirectToForm, 500);
   }, { once: true });
 
