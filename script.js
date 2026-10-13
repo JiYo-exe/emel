@@ -27,11 +27,4 @@ function startVideoGate() {
     video.controls = true;
   });
 }
-
-if (localStorage.getItem(VISITED_KEY) === "true") {
-  redirectToForm();
-} else {
-  // Mark the first visit before playback so a refresh or Back navigation does not replay it.
-  localStorage.setItem(VISITED_KEY, "true");
-  startVideoGate();
-}
+startVideoGate();
